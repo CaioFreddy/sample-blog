@@ -21,6 +21,12 @@ spec:
           env:
             - name: environment
               value: {{ .Values.environment }}
+            - name: "CASSANDRA_HOST"
+              value: 
+            - name: "CASSANDRA_PORT"
+              value: 
+            - name: "CASSANDRA_DBNAME"
+              value:  blog
           resources:
             limits:
               memory: {{ .Values.resources.limits.memory }}
