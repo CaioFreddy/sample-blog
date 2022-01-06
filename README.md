@@ -1,2 +1,2 @@
 # sample-blog
-SImples implementação de um blog usando cassandra e python
+Simples implementação de um blog usando helm, cassandra e python
