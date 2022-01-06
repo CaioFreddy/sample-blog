@@ -12,3 +12,6 @@ resources:
   requests:
     memory: 128Mi
     cpu: "100m"
+cassandra:
+  host: cassandra.sample-blog
+  port: 9042

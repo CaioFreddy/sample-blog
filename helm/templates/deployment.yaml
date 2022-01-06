@@ -21,10 +21,19 @@ spec:
           env:
             - name: environment
               value: {{ .Values.environment }}
+            - name: PYTHONUNBUFFERED
+              value: "0"
             - name: "CASSANDRA_HOST"
-              value: 
+              value: {{ .Values.cassandra.host }}
             - name: "CASSANDRA_PORT"
-              value: 
+              value: {{ .Values.cassandra.port | quote }}
+            - name: "CASSANDRA_USER"
+              value: "cassandra"
+            - name: "CASSANDRA_PASS"
+              valueFrom:
+                secretKeyRef:
+                  name: cassandra
+                  key: cassandra-password
             - name: "CASSANDRA_DBNAME"
               value:  blog
           resources:
