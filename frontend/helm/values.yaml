@@ -1,0 +1,16 @@
+environment: development
+container:
+  name: sampleblog-frontend
+  port: 8080
+  image: strikerx/sampleblog-frontend
+  tag: latest
+replicas: 1
+resources:
+  limits:
+    memory: 256Mi
+    cpu: "250m"
+  requests:
+    memory: 128Mi
+    cpu: "100m"
+backend:
+  host: sampleblog.sample-blog:5000

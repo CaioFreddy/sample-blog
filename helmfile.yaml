@@ -5,7 +5,7 @@ repositories:
 releases:
   - name: sampleblog
     namespace: sample-blog
-    chart: .
+    chart: ./backend/helm
 
   - name: cassandra
     namespace: sample-blog
@@ -15,3 +15,7 @@ releases:
         value: cassandra
       - name: dbUser.password
         value: cassandra
+    
+  - name: sampleblog-frontend
+    namespace: sample-blog
+    chart: ./frontend/helm

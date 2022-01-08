@@ -1,19 +1,23 @@
 <template>
   <div id="app">
     <Navbar />
-    <Posts />
+    <InputPosts />
+    <GetPosts />
   </div>
 </template>
 
 <script>
+
 import Navbar from "./components/Navbar.vue";
-import Posts from "./components/Posts.vue";
+import InputPosts from "./components/InputPosts.vue";
+import GetPosts from "./components/GetPosts.vue";
 
 export default {
   name: "app",
   components: {
     Navbar,
-    Posts,
+    InputPosts,
+    GetPosts,
   },
 };
 </script>
